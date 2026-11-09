@@ -1,0 +1,1 @@
+export default function Loading(){return <main style={{paddingTop:100,paddingBottom:100}} aria-busy="true"><p className="eyebrow">WORLDS / FANTASY</p><h1>Counting every point.</h1><p>Loading your draft’s match data…</p></main>;}

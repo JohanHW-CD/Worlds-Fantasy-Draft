@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {scorePlayerGame} from '../src/lib/scoring';
+const stats={durationMinutes:33,kills:4,assists:6,deaths:2,csDifference:20,playerGold:15000,opponentGold:13000,win:1};
+test('manual 33-minute example: 6+6-1+1+2+2=16',()=>{assert.equal(scorePlayerGame(stats).total,16)});
+test('duration multiplier is applied once to entire base',()=>{assert.equal(scorePlayerGame({...stats,durationMinutes:66}).total,16/Math.E); assert.ok(scorePlayerGame({...stats,durationMinutes:20}).total>16)});
+test('caps gold separately before subtracting',()=>{assert.equal(scorePlayerGame({...stats,playerGold:30000,opponentGold:25000}).components.gold,0);assert.equal(scorePlayerGame({...stats,playerGold:21000,opponentGold:19000}).components.gold,1)});
+test('negative scores survive',()=>{assert.equal(scorePlayerGame({...stats,kills:0,assists:0,deaths:10,csDifference:-20,playerGold:10000,opponentGold:15000,win:0}).total,-11)});
+test('lambda changes only gold component',()=>{assert.equal(scorePlayerGame(stats,0).total,14);assert.equal(scorePlayerGame(stats,2).total,18)});
+test('invalid, absent, or extra fields rejected',()=>{for(const input of [{...stats,durationMinutes:0},{...stats,kills:-1},{...stats,kills:1.5},{...stats,win:2},{...stats,playerGold:NaN},{...stats,opponentGold:undefined},{...stats,teamObjectives:5}]) assert.throws(()=>scorePlayerGame(input));assert.throws(()=>scorePlayerGame(stats,Infinity))});

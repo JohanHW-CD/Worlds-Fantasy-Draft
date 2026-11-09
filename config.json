@@ -1,0 +1,43 @@
+{
+  "scope": {
+    "league": "WLDs",
+    "year": 2026
+  },
+  "lambda": 1,
+  "fantasyTeams": [
+    {
+      "id": "wille",
+      "name": "Team Wille",
+      "players": [
+        "Bin",
+        "Oner",
+        "Chovy",
+        "ON",
+        "Ruler"
+      ]
+    },
+    {
+      "id": "johan",
+      "name": "Team Johan",
+      "players": [
+        "Doran",
+        "Canyon",
+        "Knight",
+        "Keria",
+        "Viper"
+      ]
+    },
+    {
+      "id": "cg",
+      "name": "Team CG",
+      "players": [
+        "Kiin",
+        "Lucid",
+        "Faker",
+        "Career",
+        "Caliste"
+      ]
+    }
+  ],
+  "aliases": {}
+}

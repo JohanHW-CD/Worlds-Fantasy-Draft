@@ -1,0 +1,39 @@
+{
+  "key": "2026:WLDs:13506-13506_game_1:oe:player:37f20525a39d17ec49fd10294f9c994",
+  "gameId": "13506-13506_game_1",
+  "league": "WLDs",
+  "year": 2026,
+  "date": "2026-09-17T09:11:42.000Z",
+  "playerId": "oe:player:37f20525a39d17ec49fd10294f9c994",
+  "playerName": "TheShy",
+  "teamName": "Invictus Gaming",
+  "role": "top",
+  "side": "Blue",
+  "opponentId": "oe:player:f52533de1cc92487ab58b973cd2490e",
+  "opponentName": "ZUIAN",
+  "stats": {
+    "durationMinutes": 40.38333333333333,
+    "kills": 2,
+    "assists": 6,
+    "deaths": 1,
+    "csDifference": 32,
+    "playerGold": 15898,
+    "opponentGold": 13767,
+    "win": 1
+  },
+  "score": {
+    "scoringVersion": "v1-no-objectives-no-teamfights",
+    "lambda": 1,
+    "components": {
+      "kills": 3,
+      "assists": 6,
+      "deaths": -0.5,
+      "cs": 1.6,
+      "gold": 2.131,
+      "win": 2
+    },
+    "baseScore": 14.231,
+    "durationMultiplier": 0.7995250830835815,
+    "total": 11.378041457362448
+  }
+}
